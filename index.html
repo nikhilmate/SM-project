@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Web - ecomm</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/sagar.css" />
+</head>
+
+<body>
+  <div class="preloader">
+    <div id="sign"></div>
+  </div>
+
+  <div class="wrapper">
+
+    <!--Static left-->
+    <div class="navigation">
+      <div class="logo">
+        <img src="images/sm.png" alt="SM ecomm">
+      </div>
+      <ul class="menubar">
+        <li>
+          <a href="" id="products">PRODUCTS</a>
+
+          <ul class="products">
+            <li>
+              <a href="" id="atta">ATTA</a>
+              <ul class="atta">
+                  <li>
+                    <a href="">ASHIRWAD</a>
+                  </li>
+                  <li>
+                    <a href="">INDIA GATE</a>
+                  </li>
+                  <li>
+                    <a href="">SILVER COIN</a>
+                  </li>
+                </ul>
+            </li>
+            <li>
+              <a href="">RICE</a>
+            </li>
+            <li>
+              <a href="">OIL</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="">BLOG</a>
+        </li>
+        <li>
+          <a href="">ABOUT</a>
+        </li>
+        <li>
+          <a href="">CONTACT</a>
+        </li>
+      </ul>
+    </div>
+    <!--Static right-->
+    <div class="helpdesk">
+      <div class="cart">
+        <img src="images/cart.png" alt="Cart">
+        <span class="adder"></span>
+      </div>
+      <button id=login_clk>login</button>
+      <button id="register_clk" style="margin-top: 10px;">register</button>
+      <ul class="menubar">
+        <li>
+          <a href=""></a>
+        </li>
+        <li>
+          <a href="">NEED HELP?</a>
+        </li>
+        <li>
+          <a href="">TUTORIAL</a>
+        </li>
+        <li>
+          <a href="">HELPDESK</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <div class="slow">
+        <!--header-->
+        <div class="header">
+          <div class="container">
+            <div class="row">
+              <!--
+              <div class="toggle-button">
+                <span id="line"></span>
+                <span id="line"></span>
+                <span id="line"></span>
+              </div>-->
+              <div class="search">
+                <form>
+                  <input type="text" name="ip">
+                  <input type="submit" value="search">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sell">
+          <div class="container">
+            <div class="row">
+              <div id="stack">
+                <div class="prods">
+                  <img src="images/p1.png">
+                </div>
+                <button class="addcart" id="p1">ADD TO CART</button>
+                <button class="buy" id="p1">BUY NOW</button>
+              </div>
+
+              <div id="stack">
+                <div class="prods">
+                  <img src="images/p2.png">
+                </div>
+                <button class="addcart" id="p2">ADD TO CART</button>
+                <button class="buy" id="p2">BUY NOW</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <div class="container">
+            <div class="row">
+              <h1>POWERED BY COOLNIK</h1>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+    <!--MODALs-->
+    <div class="modal">
+      <span class="close modal_foot cls_btn" title="Close">&times;</span>
+    </div>
+    <div class=inner_modal>
+      <h2>login</h2>
+      <div class="modal_cont">
+        <form id=f1 method="get">
+          <input type="text" name="txt1" placeholder="username" required="required">
+          <br>
+          <input type="password" name="pass" placeholder="password" required="required">
+      </div>
+      <br>
+      <span class="modal_foot">
+        <input type="submit" value="login">
+        <input type="button" class="close" value="close">
+        </form>
+      </span>
+    </div>
+    <div class="modal2">
+      <span class="close2 modal_foot2 cls_btn" title="Close">&times;</span>
+    </div>
+    <div class=inner_modal2>
+      <h2>register</h2>
+      <div class="modal_cont2">
+        <form id=f2 method="get">
+          <input type="text" name="txt1" placeholder="username" required="required">
+          <br>
+          <input type="password" name="pass" placeholder="password" required="required">
+          <br>
+          <input type="password" name="pass" placeholder="confirm password" required="required">
+          <br>
+          <input type="email" name="pass" placeholder="email" required="required">
+          <br>
+          <input type="number" maxlength="10" name="pass" placeholder="mobile no." required="required">
+      </div>
+
+      <br>
+      <span class="modal_foot2">
+        <input type="submit" value="register">
+        <input type="button" class="close2" value="close">
+        </form>
+      </span>
+    </div>
+
+
+
+
+  </div>
+  <script src="js/main.js"></script>
+  <script src="js/jquery.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      /*Login*/
+      $("#login_clk").click(function () {
+        $(".modal").slideToggle();
+        $(".inner_modal").fadeIn("slow");
+      });
+      $(".close").click(function () {
+        $(".modal").slideToggle();
+        $(".inner_modal").fadeOut("fast");
+      });
+
+      /*Register*/
+      $("#register_clk").click(function () {
+        $(".modal2").slideToggle();
+        $(".inner_modal2").fadeIn("slow");
+      });
+      $(".close2").click(function () {
+        $(".modal2").slideToggle();
+        $(".inner_modal2").fadeOut("fast");
+      });
+
+
+    });
+
+  </script>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>
